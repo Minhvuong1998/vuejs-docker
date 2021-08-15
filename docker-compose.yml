@@ -1,0 +1,23 @@
+version: "3.9"
+
+# networks:
+#   app:
+#     driver: bridge
+
+services:
+  web:
+    container_name: web
+    build: 
+      context: ./frondend
+      dockerfile: Dockerfile
+    command: yarn serve
+    restart: always
+    ports:
+      - 80:80
+  nginx:
+    build: 
+      context: ./nginx
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 80:80

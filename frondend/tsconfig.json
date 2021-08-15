@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": [
+      "esnext",
+      "dom",
+      // "WebWorker"
+    ],
+    "types": [
+      // "vite-svg-loader",
+      "vite/client",
+      // "vite-plugin-pwa/client"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["frondend/src/*"]
+    }
+  },
+  "include": ["frondend/src/**/*.ts", "frondend/src/**/*.d.ts", "frondend/src/**/*.vue"]
+}
